@@ -1,0 +1,4 @@
+binance
+numpy
+sqlite
+flask
