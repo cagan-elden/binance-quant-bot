@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-family: verdana;
+}
+.container {
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container .left {
+    float: left;
+    height: 100vh;
+    background-color: #111;
+    border-right: 1px solid #888;
+}
+.container .left #logo {
+    width: 7.5em;
+    height: 6em;
+    margin: 0.75em;
+    margin-left: 1.25em;
+}
+.container .left #title {
+    color: ghostwhite;
+    align-self: center;
+    margin-left: 2em;
+}
+.container .left #description {
+    color: ghostwhite;
+    font-size: 10px;
+    margin-left: 2.5em;
+}
+
+.container .left .menu {
+    width: 100%;
+    border-top: 1px solid #888;
+    margin-top: 0.75em;
+}
+.container .left .menu ul li {
+    list-style: none;
+    width: 27.5vh;
+    border-bottom: 1px solid #888;
+    padding: 0.5em;
+}
+.container .left .menu ul li:hover {
+    background-color: #222;
+    transition: 0.5s background-color;
+}
+.container .left .menu ul li #link {
+    text-decoration: none;
+    color: ghostwhite;
+    font-size: 15px;
+    margin-left: 1em;
+}
+.container .left .menu ul li #link #menu-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+}

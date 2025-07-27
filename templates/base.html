@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trad.er - Binance Trading Bot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo-parent">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" id="logo">
+                <h3 id="title">Trad.er</h3>
+                <span id="description">Open Source Trader</span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li id="menu-element">
+                        <a href="/" id="link"><img src="{{ url_for('static', filename='img/home.png') }}" id="menu-icon">Dashboard</a>
+                    </li>
+                    <li id="menu-element">
+                        <a href="/account" id="link"><img src="{{ url_for('static', filename='img/bingo.png') }}" id="menu-icon">Bingo</a>
+                    </li>
+                    <li id="menu-element">
+                        <a href="/account" id="link"><img src="{{ url_for('static', filename='img/account.png') }}" id="menu-icon">Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="page">
+                {% block page %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
