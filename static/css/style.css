@@ -63,3 +63,93 @@ html, body {
     height: 1.5em;
     margin-right: 0.5em;
 }
+
+.container .right {
+    padding: 0.75em;
+    float: left;
+}
+.container .right .page {
+    margin: 0.75em;
+    padding: 1em;
+    border: 1px solid #888;
+    border-radius: 0.5em;
+    background-color: #111;
+    width: 170vh;
+}
+.container .right .page h1 {
+    color: ghostwhite;
+    font-size: 30px;
+    margin-bottom: 0.5em;
+}
+.container .right .page .dashboard-menu {
+    display: block;
+    margin-bottom: 1em;
+}
+.container .right .page .group {
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    background-color: #1b1b1b;
+    width: 50vh;
+    box-shadow: 3px 3px 3px #272626;
+    display: inline-block;
+    margin-right: 1.5em;
+}
+.container .right .page .group .header {
+    border-bottom: 1px solid #888;
+    padding: 0.5em;
+    height: 11vh;
+    display: block;
+}
+.container .right .page .group .header .group-icon {
+    height: 2.5em;
+    width: 2.5em;
+    float: left;
+    display: block;
+    margin-right: 0.5em;
+}
+.container .right .page .group .header #title {
+    color: green;
+    margin-top: 0.5em;
+}
+.container .right .page .group .header #bingo {
+    color: yellow;
+    margin-top: 0.5em;
+}
+.container .right .group .coin {
+    border-bottom: 1px solid #888;
+    padding: 0.5em;
+    height: 10vh;
+}
+.container .right .group .coin .coin-left {
+    float: left;
+    display: flexbox;
+    margin-right: 0.5em;
+}
+.container .right .group .coin .coin-left #symbol {
+    display: block;
+    font-weight: bold;
+    color: ghostwhite;
+}
+.container .right .group .coin .coin-left #binance {
+    color: ghostwhite;
+    font-size: 12px;
+}
+.container .right .group .coin .coin-right {
+    float: right;
+    display: flexbox;
+    font-weight: bold;
+    font-size: 12px;
+}
+.container .right .group .coin .coin-right#bullish {
+    color: green;
+}
+.container .right .group .coin .coin-right#bearish {
+    color: red;
+}
+.container .right .group .coin .coin-right#bingo {
+    color: yellow;
+}
+.container .right .group .coin-right #price {
+    display: block;
+    margin-bottom: 1.25em;
+}
