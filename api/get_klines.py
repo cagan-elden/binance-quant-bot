@@ -24,3 +24,8 @@ def getSymbols(client):
             symbols.append(symbol['symbol'])
 
     return symbols
+
+def getExchangeInfo(client, symbol):
+    symbolInfo = client.get_ticker(symbol=symbol)
+
+    return symbolInfo

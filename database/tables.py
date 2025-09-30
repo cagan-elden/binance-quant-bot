@@ -1,5 +1,5 @@
 binance_1m = """CREATE TABLE kline_1m (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -10,12 +10,23 @@ binance_1m = """CREATE TABLE kline_1m (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_5m = """CREATE TABLE kline_5m (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -26,12 +37,23 @@ binance_5m = """CREATE TABLE kline_5m (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_15m = """CREATE TABLE kline_15m (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -42,12 +64,23 @@ binance_15m = """CREATE TABLE kline_15m (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_30m = """CREATE TABLE kline_30m (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -58,12 +91,23 @@ binance_30m = """CREATE TABLE kline_30m (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_1h = """CREATE TABLE kline_1h (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -74,12 +118,23 @@ binance_1h = """CREATE TABLE kline_1h (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_2h = """CREATE TABLE kline_2h (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -90,12 +145,23 @@ binance_2h = """CREATE TABLE kline_2h (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_4h = """CREATE TABLE kline_4h (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -106,12 +172,23 @@ binance_4h = """CREATE TABLE kline_4h (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_8h = """CREATE TABLE kline_8h (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -122,12 +199,23 @@ binance_8h = """CREATE TABLE kline_8h (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_1d = """CREATE TABLE kline_1d (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -138,12 +226,23 @@ binance_1d = """CREATE TABLE kline_1d (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_1w = """CREATE TABLE kline_1w (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -154,12 +253,23 @@ binance_1w = """CREATE TABLE kline_1w (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
 binance_1mo = """CREATE TABLE kline_1mo (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     symbol VARCHAR(100),
     open_price DECIMAL(18, 8),
     close_price DECIMAL(18, 8),
@@ -170,7 +280,18 @@ binance_1mo = """CREATE TABLE kline_1mo (
     quote_asset_volume DECIMAL(18, 8),
     number_of_trades INT,
     taker_buy_asset_volume DECIMAL(18, 8),
-    taker_buy_quote_asset_volume DECIMAL(18, 8)
+    taker_buy_quote_asset_volume DECIMAL(18, 8),
+    price_change DECIMAL(18, 8),
+    price_change_percent DECIMAL(18, 8),
+    weighted_avg_price DECIMAL(18, 8),
+    prev_close_price DECIMAL(18, 8),
+    last_price DECIMAL(18, 8),
+    bid_price DECIMAL(18, 8),
+    ask_price DECIMAL(18, 8),
+    volume DECIMAL(18, 8),
+    first_id BIGINT,
+    last_id BIGINT,
+    trade_count INT
 );
 """
 
