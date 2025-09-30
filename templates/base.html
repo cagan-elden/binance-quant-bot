@@ -21,7 +21,13 @@
                         <a href="/" id="link"><img src="{{ url_for('static', filename='img/home.png') }}" id="menu-icon">Dashboard</a>
                     </li>
                     <li id="menu-element">
-                        <a href="/account" id="link"><img src="{{ url_for('static', filename='img/bingo.png') }}" id="menu-icon">Bingo</a>
+                        <a href="/market" id="link"><img src="{{ url_for('static', filename='img/market.png') }}" id="menu-icon">Market</a>
+                    </li>
+                    <li id="menu-element">
+                        <a href="/news" id="link"><img src="{{ url_for('static', filename='img/news.png') }}" id="menu-icon">News</a>
+                    </li>
+                    <li id="menu-element">
+                        <a href="/bingo" id="link"><img src="{{ url_for('static', filename='img/bingo.png') }}" id="menu-icon">Bingo</a>
                     </li>
                     <li id="menu-element">
                         <a href="/account" id="link"><img src="{{ url_for('static', filename='img/account.png') }}" id="menu-icon">Account</a>
@@ -33,6 +39,9 @@
             <div class="page">
                 {% block page %}
                 {% endblock %}
+            </div>
+            <div class="bottom">
+                <span style="color: red; float: left; padding-right: 10px;">◉</span><marquee behavior="10" direction="left" id="news">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, iure quas corrupti distinctio velit sunt, iste voluptatibus amet, quis repellat facere. Obcaecati cum a excepturi fugiat neque, libero velit inventore.</marquee>
             </div>
         </div>
     </div>

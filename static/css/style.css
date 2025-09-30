@@ -65,8 +65,8 @@ html, body {
 }
 
 .container .right {
-    padding: 0.75em;
     float: left;
+    position: relative;
 }
 .container .right .page {
     margin: 0.75em;
@@ -152,4 +152,18 @@ html, body {
 .container .right .group .coin-right #price {
     display: block;
     margin-bottom: 1.25em;
+}
+.container .right .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 27.75vh;
+    width: calc(100% - 27.75vh);
+    background-color: #111;
+    color: whitesmoke;
+    padding: 0.75em;
+    border-top: 1px solid #888;
+    z-index: 999;
+}
+.container .right .bottom #news {
+    display: block;
 }

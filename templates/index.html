@@ -4,7 +4,11 @@
     <h1 id="title">Crypto Dashboard</h1>
 
     <div class="dashboard-menu">
-        <select name="interval" id="interval">
+        <select name="indicator" id="indicator" class="dashboard-item">
+            <option value="1m">Supertrend</option>
+        </select>
+
+        <select name="interval" id="interval" class="dashboard-item">
             <option value="1m">1m</option>
             <option value="5m" selected>5m</option>
             <option value="15m">15m</option>
@@ -18,8 +22,6 @@
             <option value="1mo">1mo</option>
         </select>
     </div>
-
-    <p style="color: white;">${{ balance }}</p>
 
     <!-- Bearish -->
     <div class="group">
