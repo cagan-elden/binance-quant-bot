@@ -11,14 +11,16 @@ import api
 from api import get_klines, account
 
 client = get_klines.api_connection()
+
 account_value = account.account_value(client)
+# pnl = account.pnl(client)
 
 # start app
 app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
-    return flask.render_template('index.html', balance=account_value)
+    return flask.render_template('index.html', balance=account_value, pnl=+3.5)
 
 if __name__ == '__main__':
     app.run(debug=True)

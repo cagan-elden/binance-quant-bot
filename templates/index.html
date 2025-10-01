@@ -1,85 +1,48 @@
 {% extends 'base.html' %}
 
 {% block page %}
-    <h1 id="title">Crypto Dashboard</h1>
 
-    <div class="dashboard-menu">
-        <select name="indicator" id="indicator" class="dashboard-item">
-            <option value="1m">Supertrend</option>
-        </select>
+<!-- ===== BALANCE CARD ===== -->
+<div class="balance">
+    <h3>Estimated Balance</h3>
+    <b id="balance">
+        <span style="font-size: 13px;">$ </span>
+        <span style="font-size: 20px;">{{ balance }}</span>
+    </b>
+    <span id="pnl">Today's PnL: ${{ pnl }} (%0.5)</span>
+</div>
 
-        <select name="interval" id="interval" class="dashboard-item">
-            <option value="1m">1m</option>
-            <option value="5m" selected>5m</option>
-            <option value="15m">15m</option>
-            <option value="30m">30m</option>
-            <option value="1h">1h</option>
-            <option value="2h">2h</option>
-            <option value="4h">4h</option>
-            <option value="8h">8h</option>
-            <option value="1d">1d</option>
-            <option value="1w">1w</option>
-            <option value="1mo">1mo</option>
-        </select>
+<!-- ===== DASHBOARD CONTROLS ===== -->
+<div class="dashboard-menu">
+    <button id="long" style="background-color: green;">LONG</button>
+    <button id="short" style="background-color: red;">SHORT</button>
+
+    <select name="indicator" id="indicator" class="dashboard-item">
+        <option value="supertrend">Supertrend</option>
+        <option value="macd">MACD</option>
+        <option value="devisso">Devis'so</option>
+        <option value="rsi">RSI</option>
+    </select>
+
+    <select name="interval" id="interval" class="dashboard-item">
+        <option value="1m">1m</option>
+        <option value="5m" selected>5m</option>
+        <option value="15m">15m</option>
+        <option value="30m">30m</option>
+        <option value="1h">1h</option>
+        <option value="2h">2h</option>
+        <option value="4h">4h</option>
+        <option value="8h">8h</option>
+        <option value="1d">1d</option>
+        <option value="1w">1w</option>
+        <option value="1mo">1mo</option>
+    </select>
+</div>
+
+<div class="panel">
+    <div class="panel-header">
+        
     </div>
+</div>
 
-    <!-- Bearish -->
-    <div class="group">
-        <div class="header">
-            <img src="{{ url_for('static', filename='img/bullish.png') }}" class="group-icon" id="bullish">
-            <h2 id="title">Bullish</h2>
-        </div>
-        {% for i in range(5) %}
-            <div class="coin">
-                <div class="coin-left">
-                    <span id="symbol">BTC</span>
-                    <span id="binance">BTCUSDT</span>
-                </div>
-                <div class="coin-right" id="bullish">
-                    <span id="price">99.000.000$</span>
-                    <span id="percentage">%203.05 ↑</span>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-    <!-- Bullish -->
-    <div class="group">
-        <div class="header">
-            <img src="{{ url_for('static', filename='img/bearish.png') }}" class="group-icon" id="bullish">
-            <h2 id="title" style="color: red;">Bearish</h2>
-        </div>
-        {% for i in range(5) %}
-            <div class="coin">
-                <div class="coin-left">
-                    <span id="symbol">XRP</span>
-                    <span id="binance">XRPUSDT</span>
-                </div>
-                <div class="coin-right" id="bearish">
-                    <span id="price">2.87$</span>
-                    <span id="percentage">%-23.34 ↓</span>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-    <!-- Bingo -->
-    <div class="group">
-        <div class="header">
-            <img src="{{ url_for('static', filename='img/bingo yellow.png') }}" class="group-icon" id="bullish">
-            <h2 id="title" style="color: yellow;">Bingo</h2>
-        </div>
-        {% for i in range(5) %}
-            <div class="coin">
-                <div class="coin-left">
-                    <span id="symbol">LTC</span>
-                    <span id="binance">LTCUSDT</span>
-                </div>
-                <div class="coin-right" id="bingo">
-                    <span id="price">3.47$</span>
-                    <span id="percentage">%3.05 !</span>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
 {% endblock %}
